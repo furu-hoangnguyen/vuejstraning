@@ -1,31 +1,6 @@
 <template>
-    <div>
-    <b-row class="text-md-center">
-    <b-col md="6" class="mb-3">
-      <p>Spinning animation:</p>
-      <b-icon icon="arrow-clockwise" animation="spin" font-scale="4"></b-icon>
-    </b-col>
-    <b-col md="6" class="mb-3">
-      <p>Reverse spinning animation:</p>
-      <b-icon icon="arrow-counterclockwise" animation="spin-reverse" font-scale="4"></b-icon>
-    </b-col>
-    <b-col md="6" class="mb-3">
-      <p>Pulsing spin animation:</p>
-      <b-icon icon="arrow-clockwise" animation="spin-pulse" font-scale="4"></b-icon>
-    </b-col>
-    <b-col md="6" class="mb-3">
-      <p>Reversed pulsing spin animation:</p>
-      <b-icon icon="arrow-counterclockwise" animation="spin-reverse-pulse" font-scale="4"></b-icon>
-    </b-col>
-    <b-col md="6" class="mb-3">
-      <p>Cylon animation:</p>
-      <b-icon icon="three-dots" animation="cylon" font-scale="4"></b-icon>
-    </b-col>
-    <b-col md="6" class="mb-3">
-      <p>Vertical cylon animation:</p>
-      <b-icon icon="three-dots-vertical" animation="cylon-vertical" font-scale="4"></b-icon>
-    </b-col>
-    </b-row>
+  <div class="pagelock">
+      <b-icon icon="arrow-clockwise" animation="spin" font-scale="4" class="loading"></b-icon>
   </div>
   
 </template>
@@ -35,5 +10,19 @@ export default {
 }
 </script>
 <style lang="css" scope>
-    
+    .loading{
+      color: red !important;
+    }
+    .pagelock{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10, 10, 10, .5);
+      z-index: 10000;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 </style>

@@ -39,23 +39,22 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
 export default {
   name: "LoginPage",
   data() {
     return {
-      show: true,
     };
   },
   methods: {
-    ...mapActions("LoginModule", ["act_loginUser"]),
     onSubmit(evt) {
       evt.preventDefault();
-      this.act_loginUser();
+      this.$store.dispatch('LoginModule/act_loginUser')
     },
   },
   computed: {
-    ...mapState("LoginModule", ["formLogin"]),
+    formLogin: function() {
+      return this.$store.state.LoginModule.formLogin
+    }
   },
 };
 </script>
