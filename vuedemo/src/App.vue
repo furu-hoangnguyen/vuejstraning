@@ -1,20 +1,25 @@
 <template>
   <div>
-    <b-container class="bv-example-row bv-example-row-flex-cols">
-      <b-row align-h="center">
-        <img alt="Vue logo" src="./assets/logo.png" />
-      </b-row>
-      <router-view></router-view>
-    </b-container>
+    <router-view></router-view>
+    <b-overlay :show="lockScreen" no-wrap></b-overlay>
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
-  components: {
+  data() {
+    return {
+    }
+  },
+  computed: {
+    lockScreen: function () {
+      return this.$store.state.lockScreen
+    }
   },
 };
 </script>
 
-<style></style>
+<style>
+@import url('./styles/appStyle.css');
+</style>

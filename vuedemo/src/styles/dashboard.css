@@ -1,0 +1,78 @@
+._navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+._nav {
+    min-width: 20rem;
+    height: 100vh !important;
+    font-size: 1.3rem;
+    background-color: rgb(32, 30, 30);
+}
+
+._navcontent {
+    width: 100%;
+}
+
+._nav ul li {
+    height: auto;
+    font-size: 1rem;
+    padding: 0.4rem;
+}
+
+._nav ul li a {
+    color: rgb(231, 228, 228);
+    padding: 0.6rem !important;
+}
+
+._nav ul li a:hover {
+    color: white;
+}
+
+._nav ul li a .b-icon.bi {
+    font-size: 2rem !important;
+    position: relative;
+    top: 0.2rem;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+._nav ul li a .logo img {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+._nav ul li a .logo {
+    display: inline;
+    background-color: white;
+    padding: 0.4rem;
+    border-radius: 50%;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+._nav ul li:nth-child(1) a {
+    border-bottom: .5px solid rgb(196, 194, 194);
+    padding: 0 !important;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+._nav ul li:nth-child(1) {
+    height: auto;
+    padding: .7rem
+}
+
+.page_header {
+    height: 5.7rem;
+    border-bottom: .5px solid rgb(196, 194, 194);
+}
+
+.active a {
+    color: #41b883 !important;
+}
+
+.page_header>div>div {
+    height: 5.7rem;
+    padding: .7rem;
+}

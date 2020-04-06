@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store/index'
+import mixin from './mixins/mixinsLockScreen'
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
@@ -12,6 +13,7 @@ Vue.use(BootstrapVueIcons)
 Vue.config.productionTip = false
 
 new Vue({
+    mixins: [mixin],
     router,
     store,
     render: h => h(App),
