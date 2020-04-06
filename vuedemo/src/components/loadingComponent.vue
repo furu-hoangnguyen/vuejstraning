@@ -1,6 +1,6 @@
 <template>
     <div>
-          <b-row class="text-md-center">
+    <b-row class="text-md-center">
     <b-col md="6" class="mb-3">
       <p>Spinning animation:</p>
       <b-icon icon="arrow-clockwise" animation="spin" font-scale="4"></b-icon>
@@ -25,11 +25,13 @@
       <p>Vertical cylon animation:</p>
       <b-icon icon="three-dots-vertical" animation="cylon-vertical" font-scale="4"></b-icon>
     </b-col>
+    </b-row>
   </div>
+  
 </template>
 <script>
 export default {
-    name:'loadingComponent'
+    name:'LoadingComponent'
 }
 </script>
 <style lang="css" scope>
