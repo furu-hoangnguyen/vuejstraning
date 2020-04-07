@@ -5,7 +5,7 @@
         <b-nav vertical>
           <b-nav-item @click="getPage('dashboard')"
             ><div class="logo">
-              <img src="../assets/logo.png" alt="error image" />
+              <img src="../../assets/logo.png" alt="error image" />
             </div>
             Paper Dashboard</b-nav-item
           >
@@ -132,7 +132,6 @@ export default {
       reponsive: false,
       activeNav: 1,
       title: "DASHBORD",
-      al: '<b-icon icon="bell"></b-icon> NOTIFICATION',
     };
   },
   methods: {
@@ -168,5 +167,5 @@ export default {
 };
 </script>
 <style lang="css" scope>
-@import url("../styles/dashboard.css");
+@import url("../../styles/dashboard.css");
 </style>

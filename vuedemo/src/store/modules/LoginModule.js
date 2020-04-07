@@ -1,5 +1,6 @@
 import DOMAIN from '../../api/ListBaseDomain';
 import cookie from 'vue-cookie';
+import router from '../../router';
 
 const state = {
     dataLogin: {},
@@ -17,7 +18,8 @@ const actions = {
                 commit("mut_resetFormlogin")
                 commit("mut_setDataUserLogin", response.data.user)
                 cookie.set('token', response.headers["x-auth-token"], { expires: '1d' });
-                cookie.set('dataUser', JSON.stringify(response.data.user), { expires: '1d' })
+                cookie.set('dataUser', JSON.stringify(response.data.user), { expires: '1d' });
+                router.push('home')
             } else {
                 alert("login fail");
             }

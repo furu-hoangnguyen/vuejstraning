@@ -78,8 +78,25 @@
     border-bottom: 0.5px solid rgb(196, 194, 194);
 }
 
+.active {
+    position: relative;
+}
+
 .active a {
     color: #41b883 !important;
+}
+
+.active a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 100;
+    border-right: 1rem solid #f4f3ef;
+    border-top: 2rem solid transparent;
+    border-bottom: 2rem solid transparent;
 }
 
 .page_header>div>div,

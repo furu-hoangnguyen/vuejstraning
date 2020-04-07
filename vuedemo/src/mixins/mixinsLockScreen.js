@@ -4,12 +4,7 @@ const mixin = Vue.mixin({
         return {}
     },
     methods: {
-        blockScreen() {
-            this.$store.dispatch("act_lockScreen");
-        },
-        unlockScreen() {
-            this.$store.dispatch("act_unlockScreen");
-        },
+
     },
 })
 export default mixin
