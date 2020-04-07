@@ -4,14 +4,15 @@
 }
 
 ._nav {
-    min-width: 17rem;
+    min-width: 16rem;
     height: 100vh !important;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     background-color: rgb(32, 30, 30);
 }
 
 ._navcontent {
     width: 100%;
+    background-color: #f4f3ef;
 }
 
 ._nav ul li {
@@ -26,7 +27,16 @@
 }
 
 ._nav ul li a:hover {
-    color: white;
+    color: white !important;
+}
+
+._nav button {
+    color: rgb(231, 228, 228);
+    padding: 0;
+}
+
+.btn:hover {
+    color: black;
 }
 
 ._nav ul li a .b-icon.bi {
@@ -85,11 +95,53 @@
 
 .page_content {
     border: none;
+    padding: 3rem 15px;
+    min-height: calc(100% - 15.6rem);
+}
+
+.btn_res1 {
+    display: block;
+}
+
+.btn_res {
+    display: none;
 }
 
 @media only screen and (max-width: 991px) {
     ._nav {
         position: absolute;
         right: 0;
+        display: none;
+        overflow-y: scroll;
     }
+    .side ._nav {
+        display: block;
+    }
+    ._navcontent {
+        width: 100%;
+        height: 100vh;
+    }
+    .side ._navcontent {
+        width: calc(100% - 16rem);
+    }
+    .btn_res1 {
+        display: none;
+    }
+    .btn_res {
+        display: block;
+    }
+}
+
+.noti_res a {
+    border-bottom: 0.5px solid rgb(196, 194, 194);
+}
+
+.noti_res a ul li a {
+    padding: 0 !important;
+    height: auto !important;
+    color: black;
+}
+
+.noti_res a ul li a:hover {
+    color: rgba(0, 0, 0, 0.774) !important;
 }

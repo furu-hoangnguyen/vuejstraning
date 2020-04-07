@@ -1,6 +1,6 @@
 <template>
   <b-container fluid class="bv-example-row p-0">
-    <div class="_navbar">
+    <div class="_navbar" :class="{ side: reponsive }">
       <div class="_nav">
         <b-nav vertical>
           <b-nav-item @click="getPage('dashboard')"
@@ -9,6 +9,18 @@
             </div>
             Paper Dashboard</b-nav-item
           >
+
+          <b-nav-item class="btn_res"><b-icon icon="house-door"></b-icon>STATS</b-nav-item>
+          <b-nav-item class="btn_res"><b-icon icon="gear"></b-icon> SETTINGS</b-nav-item>
+          <b-nav-item class="noti_res btn_res">
+            <b-dropdown id="dropdown-1" variant="none" >
+              <template v-slot:button-content>
+                <b-icon icon="bell"></b-icon> NOTIFICATION
+              </template>
+              <b-dropdown-item>First Action</b-dropdown-item>
+              <b-dropdown-item>Second Action</b-dropdown-item>
+              <b-dropdown-item>Third Action</b-dropdown-item>
+            </b-dropdown></b-nav-item>
           <b-nav-item
             :class="{ active: activeNav == 1 }"
             @click="getPage('dashboard')"
@@ -54,18 +66,30 @@
               <b-col>
                 <b-container fluid class="bv-example-row">
                   <b-row align-h="end">
-                    <b-col cols="auto" ><b-btn variant="none"><b-icon icon="house-door"></b-icon>STATS</b-btn></b-col>
-                    <b-col cols="auto">
+                    <b-col cols="auto" class="btn_res1"
+                      ><b-btn variant="none"
+                        ><b-icon icon="house-door"></b-icon>STATS</b-btn
+                      ></b-col
+                    >
+                    <b-col cols="auto" class="btn_res1">
                       <b-dropdown id="dropdown-1" variant="none">
-                          <template v-slot:button-content>
-                            <b-icon icon="bell"></b-icon> NOTIFICATION
-                          </template>
+                        <template v-slot:button-content>
+                          <b-icon icon="bell"></b-icon> NOTIFICATION
+                        </template>
                         <b-dropdown-item>First Action</b-dropdown-item>
                         <b-dropdown-item>Second Action</b-dropdown-item>
                         <b-dropdown-item>Third Action</b-dropdown-item>
                       </b-dropdown>
                     </b-col>
-                    <b-col cols="auto"><b-button variant="none"><b-icon icon="gear"></b-icon> SETTINGS</b-button></b-col>
+                    <b-col cols="auto" class="btn_res1"
+                      ><b-button variant="none"
+                        ><b-icon icon="gear"></b-icon> SETTINGS</b-button
+                      ></b-col
+                    >
+                    <b-col cols="auto" class="btn_res"
+                      ><b-btn variant="none" @click="reponsive = !reponsive"
+                        ><b-icon icon="list"></b-icon></b-btn
+                    ></b-col>
                   </b-row>
                 </b-container>
               </b-col>
@@ -86,7 +110,10 @@
               <b-col>
                 <b-container fluid class="bv-example-row">
                   <b-row align-h="end">
-                    <b-col cols="auto">© Coded with by Cristi Jora. Designed by Creative Tim.</b-col>
+                    <b-col cols="auto"
+                      >© Coded with by Cristi Jora. Designed by Creative
+                      Tim.</b-col
+                    >
                   </b-row>
                 </b-container>
               </b-col>
@@ -102,9 +129,10 @@ export default {
   name: "HomePage",
   data() {
     return {
+      reponsive: false,
       activeNav: 1,
       title: "DASHBORD",
-      al:'<b-icon icon="bell"></b-icon> NOTIFICATION'
+      al: '<b-icon icon="bell"></b-icon> NOTIFICATION',
     };
   },
   methods: {
