@@ -12,7 +12,7 @@
           <b-nav-item
             :class="{ active: activeNav == 1 }"
             @click="getPage('dashboard')"
-            ><b-icon icon="house-fill"></b-icon>Dashboard</b-nav-item
+            ><b-icon icon="house-door"></b-icon>Dashboard</b-nav-item
           >
           <b-nav-item
             :class="{ active: activeNav == 2 }"
@@ -54,15 +54,39 @@
               <b-col>
                 <b-container fluid class="bv-example-row">
                   <b-row align-h="end">
-                    <b-col cols="auto">Stats</b-col>
+                    <b-col cols="auto" ><b-btn variant="none"><b-icon icon="house-door"></b-icon>STATS</b-btn></b-col>
                     <b-col cols="auto">
-                      <b-dropdown id="dropdown-1" text="Dropdown Button">
+                      <b-dropdown id="dropdown-1" variant="none">
+                          <template v-slot:button-content>
+                            <b-icon icon="bell"></b-icon> NOTIFICATION
+                          </template>
                         <b-dropdown-item>First Action</b-dropdown-item>
                         <b-dropdown-item>Second Action</b-dropdown-item>
                         <b-dropdown-item>Third Action</b-dropdown-item>
                       </b-dropdown>
                     </b-col>
-                    <b-col cols="auto">Settings</b-col>
+                    <b-col cols="auto"><b-button variant="none"><b-icon icon="gear"></b-icon> SETTINGS</b-button></b-col>
+                  </b-row>
+                </b-container>
+              </b-col>
+            </b-row>
+          </b-container>
+        </div>
+        <div class="page_header page_content mt-3 mb-5">
+          <b-container fluid class="bv-example-row bv-example-row-flex-cols">
+            <b-row>
+              <b-col> content-class</b-col>
+            </b-row>
+          </b-container>
+        </div>
+        <div class="footer">
+          <b-container fluid class="bv-example-row bv-example-row-flex-cols">
+            <b-row align-v="center">
+              <b-col cols="auto">{{ title }}</b-col>
+              <b-col>
+                <b-container fluid class="bv-example-row">
+                  <b-row align-h="end">
+                    <b-col cols="auto">© Coded with by Cristi Jora. Designed by Creative Tim.</b-col>
                   </b-row>
                 </b-container>
               </b-col>
@@ -80,6 +104,7 @@ export default {
     return {
       activeNav: 1,
       title: "DASHBORD",
+      al:'<b-icon icon="bell"></b-icon> NOTIFICATION'
     };
   },
   methods: {
